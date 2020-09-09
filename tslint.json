@@ -1,0 +1,10 @@
+{
+	"extends": [
+		"tslint:recommended",
+		"tslint-config-prettier"
+	],
+	"rules": {
+		"prefer-for-of": false,
+		"no-misused-new": false
+	}
+}
