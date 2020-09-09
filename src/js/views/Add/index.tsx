@@ -7,6 +7,9 @@ import { useWorkerAdd } from '../../hooks/worker';
 
 // Components
 import Input from '../../components/Input';
+import CPF from '../../components/Input/CPF';
+import Numeric from '../../components/Input/Numeric';
+import Money from '../../components/Input/Money';
 
 export default function AddWorker () {
 
@@ -28,11 +31,11 @@ export default function AddWorker () {
 
 				<Form onSubmit={addWorker} className="col-md-6 offset-md-3">
 					<Input required label="Nome" name="name" />
-					<Input required label="CPF" name="cpf" />
-					<Input required label="Salário bruto" name="income" />
-					<Input required label="Dependentes" name="dependents" />
+					<CPF required label="CPF" name="cpf" />
+					<Money required label="Salário bruto" name="income" />
+					<Numeric required label="Dependentes" name="dependents" />
 
-					<button className="block button background-primary-interactive m-0">Adicionar</button>
+					<button className="block button background-primary-interactive m-0 roundless">Adicionar</button>
 				</Form>
 			</div>
 		</div>

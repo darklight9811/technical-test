@@ -1679,6 +1679,11 @@
   resolved "https://registry.yarnpkg.com/@types/uuid/-/uuid-8.3.0.tgz#215c231dff736d5ba92410e6d602050cce7e273f"
   integrity sha512-eQ9qFW/fhfGJF8WKHGEHZEyVWfZxrT+6CLIJGBcZPfxUh/+BnEj+UCGYMlr9qZuX/2AltsvwrGqp0LhEW8D0zQ==
 
+"@types/vanilla-masker@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@types/vanilla-masker/-/vanilla-masker-1.2.0.tgz#1b22559bb8b5b7af924df3f9d38dd0634c28c422"
+  integrity sha512-3d5r9I6nMcw0wHPcuoxVX+rv9+JmQSLIsK3X2vG5dG3QA9edHc8ViDSxcZ4AtoWiVx9hToAMyPM1B57WXBK8ow==
+
 "@types/yargs-parser@*":
   version "15.0.0"
   resolved "https://registry.yarnpkg.com/@types/yargs-parser/-/yargs-parser-15.0.0.tgz#cb3f9f741869e20cce330ffbeb9271590483882d"
@@ -10917,6 +10922,11 @@ validate-npm-package-license@^3.0.1:
   dependencies:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
+
+vanilla-masker@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/vanilla-masker/-/vanilla-masker-1.2.0.tgz#c2830e9d994a5fecd2261506477c2707fe589756"
+  integrity sha1-woMOnZlKX+zSJhUGR3wnB/5Yl1Y=
 
 vary@~1.1.2:
   version "1.1.2"
