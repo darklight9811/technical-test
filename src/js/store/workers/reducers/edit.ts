@@ -1,7 +1,7 @@
 // Interfaces
-import workerInterface, { actionInterface } from '../interfaces';
+import workerInterface, { ActionInterface } from '../interfaces';
 
-export default function edit (state: workerInterface[], action:actionInterface) {
+export default function edit (state: workerInterface[], action:ActionInterface) {
 	return [
 		...state.map((item: workerInterface) => {
 			if ((action.payload as workerInterface).cpf === item.cpf) {

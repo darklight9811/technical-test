@@ -5,6 +5,7 @@
 	],
 	"rules": {
 		"prefer-for-of": false,
-		"no-misused-new": false
+		"no-misused-new": false,
+		"no-console": false
 	}
 }

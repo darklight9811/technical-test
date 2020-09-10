@@ -39,6 +39,7 @@
     "build": "react-scripts build",
     "test": "jest --config jestconfig.json --coverage",
     "test:cover": "jest --config jestconfig.json --coverage && coveralls < coverage/lcov.info",
+    "lint": "tslint -p tsconfig.json",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

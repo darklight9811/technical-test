@@ -8,7 +8,7 @@ import edit from './edit';
 import remove from './remove';
 
 // Interfaces
-import workerInterface, { actionInterface } from '../interfaces';
+import workerInterface, { ActionInterface } from '../interfaces';
 
 // Types
 import { LIST_WORKERS, ADD_WORKER, EDIT_WORKER, REMOVE_WORKER} from '../types';
@@ -30,7 +30,7 @@ actions[REMOVE_WORKER] = remove;
 // Prepare
 // -------------------------------------------------
 
-export default (state: workerInterface[] = initializeWorkers(), action: actionInterface) => {
+export default (state: workerInterface[] = initializeWorkers(), action: ActionInterface) => {
 	if (!actions[action.type]) return state;
 
 	// Update store data

@@ -1,4 +1,4 @@
-export default interface workerInterface {
+export default interface WorkerInterface {
 	nome: string;
 	cpf: string;
 	salario: number;
@@ -6,7 +6,7 @@ export default interface workerInterface {
 	dependentes: number;
 }
 
-export interface actionInterface {
+export interface ActionInterface {
 	type: string,
-	payload: workerInterface | string,
+	payload: WorkerInterface | string,
 }

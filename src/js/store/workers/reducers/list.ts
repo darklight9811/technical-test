@@ -1,6 +1,6 @@
 // Interfaces
-import workerInterface, { actionInterface } from '../interfaces';
+import workerInterface, { ActionInterface } from '../interfaces';
 
-export default function list (state: workerInterface[], action:actionInterface) {
+export default function list (state: workerInterface[], action:ActionInterface) {
 	return state;
 }
