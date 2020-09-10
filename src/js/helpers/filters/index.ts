@@ -6,7 +6,7 @@ export function filterCPF (value: string) {
 }
 
 export function filterNumber (value: string) {
-	return Mask.toNumber(value);
+	return Mask.toNumber(value) || "0";
 }
 
 export function filterMoney (value: string) {
