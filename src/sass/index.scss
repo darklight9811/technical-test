@@ -4,5 +4,6 @@
 @import '~@aposoftworks/yamiassu/dist/index.css';
 
 // Overwrite
+@import './overwrite//bootstrap.scss';
 @import './overwrite/general.scss';
 @import './overwrite/yamiassu.scss';

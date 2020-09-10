@@ -34,7 +34,7 @@ export default function ListWorkers () {
 					</div>
 				</div>
 
-				<List data={workerList} onEmpty="Nenhum funcionário registrado">
+				<List paginate data={workerList} onEmpty="Nenhum funcionário registrado">
 					<Item />
 				</List>
 			</div>

@@ -3,8 +3,16 @@ import React from 'react';
 
 // Interfaces
 import ListInterface from './interface';
+import Paginator from './shared/Paginator';
 
-export default function List ({children, data, onEmpty}: ListInterface) {
+export default function List ({children, data, onEmpty, paginate}: ListInterface) {
+
+	// -------------------------------------------------
+	// Properties
+	// -------------------------------------------------
+
+	const [ currPage, setCurrPage ] = React.useState(1);
+	const [ perPage ] = React.useState(5);
 
 	// -------------------------------------------------
 	// Memos
@@ -15,8 +23,12 @@ export default function List ({children, data, onEmpty}: ListInterface) {
 			return onEmpty || null;
 
 		const response: any[] = [];
+		const startitem = paginate? ((currPage - 1) * perPage):0;
+		const countitem = paginate? ((currPage) * perPage):data.length;
 
-		for (let i = 0; i < data.length; i++) {
+		for (let i = startitem; i < countitem; i++) {
+			if (!data[i]) continue;
+
 			response.push(React.cloneElement(children,{
 				key: i,
 				...data[i],
@@ -25,11 +37,24 @@ export default function List ({children, data, onEmpty}: ListInterface) {
 		}
 
 		return response;
-	}, [children, data, onEmpty]);
+	}, [children, currPage, data, onEmpty, paginate, perPage]);
 
 	// -------------------------------------------------
 	// Properties
 	// -------------------------------------------------
 
-	return RenderChildren;
+	return (
+		<div className="list">
+			{RenderChildren}
+
+			{
+				paginate &&
+				<Paginator
+					current={currPage}
+					total={Math.ceil(data.length / perPage)}
+					setCurrent={setCurrPage}
+				/>
+			}
+		</div>
+	);
 }
