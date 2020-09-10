@@ -18,11 +18,11 @@ export default function Home () {
 	// -------------------------------------------------
 
 	const incomeAll = React.useMemo(() => {
-		return workerList.reduce((prev, curr) => prev + curr.income, 0);
+		return workerList.reduce((prev, curr) => prev + curr.salario, 0);
 	}, [workerList]);
 
 	const incomeHighest = React.useMemo(() => {
-		return workerList.reduce((prev, curr) => prev < curr.income ? curr.income:prev, 0);
+		return workerList.reduce((prev, curr) => prev < curr.salario ? curr.salario:prev, 0);
 	}, [workerList]);
 
 	const incomeMedium = React.useMemo(() => {
@@ -47,9 +47,9 @@ export default function Home () {
 				<div className="row">
 					<div className="col-md-6">
 						<p>Você possui o total de {workerList.length} {workerList.length === 1 ? "funcionário":"funcionários"}.</p>
-						<p>Você gasta com o salário de seus funcionários R$ {incomeAll} mensal.</p>
-						<p>O maior salário de seus funcionários são de R$ {incomeHighest}.</p>
-						<p>Seus funcionários possuem a média salarial de R$ {incomeMedium}.</p>
+						<p>Você gasta com o salário de seus funcionários R$ {incomeAll.toFixed(2)} mensal.</p>
+						<p>O maior salário de seus funcionários são de R$ {incomeHighest.toFixed(2)}.</p>
+						<p>Seus funcionários possuem a média salarial de R$ {incomeMedium.toFixed(2)}.</p>
 					</div>
 					<div className="col-md-6">
 						

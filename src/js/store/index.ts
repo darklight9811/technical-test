@@ -1,9 +1,11 @@
 // Packages
-import { combineReducers } from "redux";
+import { combineReducers, createStore } from "redux";
 
 // Reducers
 import workerReducer from './workers/reducers';
 
-export default combineReducers({
+const reducers = combineReducers({
 	workers: workerReducer,
 });
+
+export default createStore(reducers);

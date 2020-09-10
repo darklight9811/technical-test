@@ -1,7 +1,6 @@
 // Packages
 import React from 'react';
 import { Router, Switch } from 'react-complete-router';
-import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
 // Utils
@@ -20,7 +19,7 @@ export default function App() {
 	// -------------------------------------------------
 
 	return (
-		<Provider store={createStore(store)}>
+		<Provider store={store}>
 			<Router>
 				<Navbar />
 

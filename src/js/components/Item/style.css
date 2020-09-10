@@ -1,0 +1,12 @@
+.icon i {
+	width: 100%;
+	text-align: center;
+	font-size: 80px;
+}
+.item {
+	padding-bottom: 8px;
+	border-bottom: 1px solid var(--primary_color);
+}
+.item p {
+	margin: 0;
+}

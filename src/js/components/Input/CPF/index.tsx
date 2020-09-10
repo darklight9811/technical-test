@@ -1,23 +1,22 @@
 // Packages
 import React from 'react';
-import { Input as DataInput } from 'formalization';
 
 // Interfaces
 import InputInterface from '../interface';
 
 // Helpers
-import { validateCPF } from '../../../helpers/validators';
+import { filterCPF } from '../../../helpers/filters';
 
-export default function CPF ({label, name, required, autoFocus}: InputInterface) {
+// Components
+import Input from '../';
+
+export default function CPF (props: InputInterface) {
 
 	// -------------------------------------------------
 	// Properties
 	// -------------------------------------------------
 
 	return (
-		<div className="form-group">
-			{label && <label htmlFor={name}>{label} {required && <span>*</span>}</label>}
-			<DataInput filters={validateCPF} id={name} name={name} autoFocus={autoFocus} className="form-control" />
-		</div>
+		<Input filters={filterCPF} {...props} />
 	);
 }

@@ -1,5 +1,6 @@
 // Packages
 import React from 'react';
+import { Link } from 'react-complete-router';
 
 // Hooks
 import { useListWorkers } from '../../hooks/worker';
@@ -24,7 +25,14 @@ export default function ListWorkers () {
 	return (
 		<div className="container">
 			<div className="card">
-				<h2 className="text-center bold mb-5">Lista de funcionários</h2>
+				<div className="row">
+					<div className="col-md-10">
+						<h2 className="text-center bold mb-5">Lista de funcionários</h2>
+					</div>
+					<div className="col-md-2">
+						<Link to='/workers/add' className="button background-primary-interactive">Adicionar</Link>
+					</div>
+				</div>
 
 				<List data={workerList} onEmpty="Nenhum funcionário registrado">
 					<Item />

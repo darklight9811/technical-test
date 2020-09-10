@@ -24,9 +24,9 @@ export function editWorker (workerInfo: workerInterface) {
 	};
 }
 
-export function removeWorker (workerInfo: workerInterface) {
+export function removeWorker (cpf: string) {
 	return {
 		type: REMOVE_WORKER,
-		payload: workerInfo.id,
+		payload: cpf,
 	};
 }

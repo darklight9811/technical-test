@@ -3,4 +3,6 @@ export default interface InputInterface {
 	name: string,
 	required?: boolean,
 	autoFocus?: boolean,
+	filters?: any[] | any,
+	validations?: any[] | any,
 }

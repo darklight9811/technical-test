@@ -3,10 +3,11 @@
  */
 export default interface workerInterface {
 	id?: string;
-	name: string;
+	nome: string;
 	cpf: string;
-	income: number;
-	dependents: number;
+	salario: number;
+	desconto: number;
+	dependentes: number;
 }
 
 export interface actionInterface {
