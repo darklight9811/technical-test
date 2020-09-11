@@ -62,7 +62,7 @@ export default function EditWorker ({id}: {id:string}) {
 					<Input required label="Nome" name="nome" />
 					<CPF required label="CPF" name="cpf" />
 					<Money required label="Salário bruto" name="salario" />
-					<Numeric required label="Dependentes" name="dependentes" />
+					<Numeric label="Dependentes" name="dependentes" />
 
 					<button className="block button background-primary-interactive m-0 roundless">Editar</button>
 				</Form>

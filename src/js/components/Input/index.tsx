@@ -8,7 +8,7 @@ import {validateRequired} from '../../helpers/validators';
 // Interfaces
 import InputInterface from './interface';
 
-export default function Input ({label, name, required, autoFocus, validations, filters}: InputInterface) {
+export default function Input ({label, name, required, autoFocus, validations, filters = []}: InputInterface) {
 
 	// -------------------------------------------------
 	// Validations
@@ -31,7 +31,7 @@ export default function Input ({label, name, required, autoFocus, validations, f
 		<div className="form-group">
 			{label && <label htmlFor={name}>{label} {required && <span>*</span>}</label>}
 			<DataInput validates={validates as any} filters={filters} id={name} name={name} autoFocus={autoFocus} className="form-control" />
-			<Error name={name} />
+			<span className="text-danger"><Error name={name} /></span>
 		</div>
 	);
 }

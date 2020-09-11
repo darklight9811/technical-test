@@ -4853,9 +4853,9 @@ form-data@~2.3.2:
     mime-types "^2.1.12"
 
 formalization@^1.4.9:
-  version "1.4.9"
-  resolved "https://registry.yarnpkg.com/formalization/-/formalization-1.4.9.tgz#cbe9322683e058e4ebd3ad7be06af73e06faddf4"
-  integrity sha512-UniBgzkc8sON2K0BV8qQT+xAd/NFMNcZYgyCR/KZyu7/yNpTgynHfaVOmbzzld8JMmjCdrqGhb73DVcQDrgO7g==
+  version "1.4.23"
+  resolved "https://registry.yarnpkg.com/formalization/-/formalization-1.4.23.tgz#aa75b429f5208e54c17742f1b59a3291881974af"
+  integrity sha512-HgchqtJIsNGpvQ/H59u7QV+ULsI6R5zZKUC4e1DE4a8YBp2XNvma6JicaH6lh5dk6Ieos628PhllREpTe9YRPQ==
 
 forwarded@~0.1.2:
   version "0.1.2"
